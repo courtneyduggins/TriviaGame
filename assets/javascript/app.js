@@ -67,28 +67,34 @@ $(document).ready(function(){
 
  $("input:radio").each(function(){
 
+    if ($("input[name='question1'][value='true']").prop("checked")){
+        AnswersCorrect++;
+        console.log(AnswersCorrect);
+    }
     
-
-    var radioValue = $("input[type='radio'].radioButtons:checked").val();
+    // var selected = document.getElementById("q1").checked;
+    //     console.log(selected);   
+    // var radioValue = $("input[type='radio'].radioButtons:checked").val();
+    // console.log(radioValue);
 
     
     
     // for (var i = 0; i < Answers.length; i++){
         // var Answers = Answers.toString();
 
-        if(radioValue.ischecked() && value==="true"){
+    //     if(radioValue.ischecked() && value==="true"){
         
 
-            AnswersCorrect++;
-            console.log(AnswersCorrect);        
-        }
+    //         AnswersCorrect++;
+    //         console.log(AnswersCorrect);        
+    //     }
     
 
-        else {
+    //     else {
 
-        AnswersIncorrect++;
+    //     AnswersIncorrect++;
         
-    }
+    // }
 // }
 
     
