@@ -1,3 +1,52 @@
+body {
+    background-image: url(../images/images-5.jpg);
+    background-repeat: cover;
+    
+    
+    /* background-size: 1400px 1400px; */
+    
+}
+
+#start-page {
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
 #questions {
     display: none;
+
+    /* background: white;
+    text-align: center;
+    margin-right: 100px;
+    margin-left: 100px; */
 }
+
+h1 {
+    color: turquoise;
+    font-size: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-size: 18px;
+}
+
+#clock {
+    margin-bottom: 50px;
+    color:yellow;
+}
+
+#submit-button {
+    margin-top: 50px;
+}
+
+/* .selections {
+    display: inline;
+} */

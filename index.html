@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
@@ -13,32 +19,168 @@
 
 <body>
 
-    <h1>Totally Trivial Trivia!</h1>
+    <div id="start-page">
+    <img src="assets/images/images.png"><br>
 
-    <div id="clock">
-        <h2>Time Remaining: <h/2>
+    <h1>Trivia Game!</h1> <br><br>
+
+    <div id="clock"> 
+
+        
+        <!-- <h2>Time Remaining:
+            <h/2> -->
     </div>
+
+
+
+    <!-- create start button... -->
 
     <div id="start-button">
-        <button type="button">Start</button>
+        <button type="button" style="height:50px; width:100px">Start</button>
     </div>
+
+
+
+    <!-- apply bootstrap so user can only make one selection per question... -->
 
     <div id="questions">
 
-        <p>What was the color of Donald Duck's bowtie?</p>
-        <input type="checkbox" name="option1" value="color"> Blue
-        <input type="checkbox" name="option2" value="color"> Yellow
-        <input type="checkbox" name="option3" value="color"> Green
-        <input type="checkbox" name="option4" value="color"> Red
+        <div id="question1">
+            <p>What color is the ottoman in Monica's apartment?</p>
 
-        <p>Which Actor does not appear in 'Saving Private Ryan'?</p>
-        <input type="checkbox" name="option1" value="name"> Givovanni Ribsi
-        <input type="checkbox" name="option1" value="name"> Tom Hanks
-        <input type="checkbox" name="option1" value="name"> Vin Diesel
-        <input type="checkbox" name="option1" value="name"> Ralph Finnes
+            <form action="">
+                <input type="radio" name="question1" value="false"> White
+                <input type="radio" name="question1" value="true"> Green
+                <input type="radio" name="question1" value="false"> Blue
+                <input type="radio" name="question1" value="false"> Purple
+            </form>
+        </div> <br>
+
+        <div id="question2">
+
+            <p>What food do Ross and Rachel share in the Pilot episode?</p>
+
+            <form action="">
+                <input type="radio" name="question2" value="false"> Oatmeal Rasin Cookie
+                <input type="radio" name="question2" value="false"> Chocalte Chip Cookie
+                <input type="radio" name="question2" value="true"> Oreo
+                <input type="radio" name="question2" value="false"> Poptart
+            </form>
+        </div><br>
+
+        <div id="question3">
+
+            <p>What is the name of Joey's Cabbage Patch Kid?</p>
+
+            <form action="">
+                <input type="radio" name="question3" value="false"> Aisha Danica
+                <input type="radio" name="question3" value="false"> Alaina Presley
+                <input type="radio" name="question3" value="true"> Alisha May Emily
+                <input type="radio" name="question3" value="false"> Adeline Linda
+            </form>
+        </div><br>
+        <div id="question4">
+
+            <p>Complete this song lyric: 'Morning's here...'</p>
+
+            <form action="">
+                <input type="radio" name="question4" value="false"> 'Sunshine is here!''
+                <input type="radio" name="question4" value="false"> 'Now morning's here!'
+                <input type="radio" name="question4" value="false"> 'The sky is clear!'
+                <input type="radio" name="question4" value="true"> 'Morning is here!'
+            </form>
+        </div><br>
+
+        <div id="question5">
+
+            <p>Whose fiance' wants the heavy metal band 'Carcass' at their wedding?</p>
+
+            <form action="">
+                <input type="radio" name="question5" value="false"> Ursula
+                <input type="radio" name="question5" value="false"> Monica
+                <input type="radio" name="question5" value="true"> Megan
+                <input type="radio" name="question5" value="false"> Pheobe
+            </form>
+        </div><br>
+
+        <div id="question6">
+
+            <p>Who on Chandler's 'list' is 'way out of his league'?</p>
+
+            <form action="">
+                <input type="radio" name="question6" value="false"> Yasmine Bleeth
+                <input type="radio" name="question6" value="false"> Uma Therman
+                <input type="radio" name="question6" value="false"> Halle Berry
+                <input type="radio" name="question6" value="true"> Jessica Rabbit
+            </form>
+        </div><br>
+
+        <div id="question7">
+
+            <p>Name the two British guys Ross plays Rugby with?</p>
+
+            <form action="">
+                <input type="radio" name="question7" value="false"> Lee and Simon
+                <input type="radio" name="question7" value="false"> Liam and Charlie
+                <input type="radio" name="question7" value="false"> Charlie and Devon
+                <input type="radio" name="question7" value="true"> Liam and Devon
+            </form>
+        </div><br>
+
+        <div id="question8">
+
+            <p>What did Monica originally want to call her children?</p>
+
+            <form action="">
+                <input type="radio" name="question8" value="true"> Emma and Daniel
+                <input type="radio" name="question8" value="false"> Jack and Emma
+                <input type="radio" name="question8" value="false"> Erica and Daniel
+                <input type="radio" name="question8" value="false"> Erica and Jack
+            </form>
+        </div><br>
+
+        <div id="question9">
+
+            <p>What car did Pheobe briefly live in?</p>
+
+            <form action="">
+                <input type="radio" name="question9" value="false"> New York Cab
+                <input type="radio" name="question9" value="false"> Pickup Truck
+                <input type="radio" name="question9" value="true"> Buick Lesabre
+                <input type="radio" name="question9" value="false"> Buick Wagon
+            </form>
+        </div><br>
+
+        <div id="question10">
+
+            <p>How many roses did Ross send Emily?</p>
+
+            <form action="">
+                <input type="radio" name="question10" value="false"> 76
+                <input type="radio" name="question10" value="false"> 74
+                <input type="radio" name="question10" value="false"> 71
+                <input type="radio" name="question10" value="true"> 72
+            </form>
+        </div>
+
 
     </div>
 
+    <div id="submit-button">
+            <button type="button" style="height:50px; width:100px">Submit</button>
+        </div>
+
+        <div id="results">
+
+            <p>Correct Answers: </p>
+            <p>Incorrect Answers: </p>
+            <p>Unanswered Questions: </p>
+
+        </div>
+
+
+
+    </div>
 
 </body>
 

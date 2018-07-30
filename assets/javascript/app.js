@@ -1,13 +1,23 @@
 $(document).ready(function(){
 
+    $("#submit-button").hide();
+    $("#results").hide();
+    //set variable for answer selections for end of game
+
+    var AnswersCorrect = 0;
+    var AnswersIncorrect = 0;
+    var Unanswered = 0;
+
      //hide questions until user hits start...
     //when user hits the start button, start countdown and display questions...
 
 
     $("#start-button").click(function(){
         $("#start-button").hide();
-
         $("#questions").show();
+        $("#submit-button").show();
+
+        
         countdown();
         decrement();
         
@@ -33,21 +43,74 @@ $(document).ready(function(){
         function stop(){
             clearInterval(intervalID);
         }
+
+        // var showQuestions = function {
+
+        // }
     }    
+
+   
 
 // setTimeout(twoMinutes, 1000 * 90);
 
 
       //user must select only one answer to each question      
             
-        
-    
+
         
     });
    
+ var Answers = ["Green", "Oreo", "Alisha May Emily", "'Morning is here!'", "Megan", "Jessica Rabbit", "Liam and Devon", "Emma and Daniel", "Buick Lesabre", "72"]   
 
+ 
+ 
+
+ $("input:radio").each(function(){
 
     
+
+    var radioValue = $("input[type='radio'].radioButtons:checked").val();
+
+    
+    
+    // for (var i = 0; i < Answers.length; i++){
+        // var Answers = Answers.toString();
+
+        if(radioValue.ischecked() && value==="true"){
+        
+
+            AnswersCorrect++;
+            console.log(AnswersCorrect);        
+        }
+    
+
+        else {
+
+        AnswersIncorrect++;
+        
+    }
+// }
+
+    
+ });
+
+
+
+ $("#submit-button").click(function(){
+    $("#questions").hide();
+    $("#clock").hide();
+    $("#submit-button").hide();
+    $("#results").show();
+ });
+ 
+
+ 
+
+
+
+
+    //check questions one to see if right answer has been selected
+    //
 
 
     //if userSelection matches Answer, increase correctAnswers by 1...
