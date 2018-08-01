@@ -12,7 +12,7 @@ $(document).ready(function () {
 
     //hide questions until user hits start...
     //when user hits the start button, start countdown and display questions...
-
+    var number = 60;
 
     $("#start-button").click(function () {
         $("#start-button").hide();
@@ -24,7 +24,7 @@ $(document).ready(function () {
         decrement();
 
 
-        var number = 60;
+        // var number = 60;
         var intervalID;
 
 
