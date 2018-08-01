@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     $("#submit-button").hide();
     $("#results").hide();
@@ -6,111 +6,176 @@ $(document).ready(function(){
 
     var AnswersCorrect = 0;
     var AnswersIncorrect = 0;
-    var Unanswered = 0;
+    // var Total = 10;
+    
+    var Unanswered = 0
 
-     //hide questions until user hits start...
+    //hide questions until user hits start...
     //when user hits the start button, start countdown and display questions...
 
 
-    $("#start-button").click(function(){
+    $("#start-button").click(function () {
         $("#start-button").hide();
         $("#questions").show();
         $("#submit-button").show();
 
-        
+
         countdown();
         decrement();
-        
-        
-        var number = 90;
+
+
+        var number = 5;
         var intervalID;
 
-        
 
-        function countdown(){
+
+        function countdown() {
             clearInterval(intervalID);
             intervalID = setInterval(decrement, 1000);
         }
 
-        function decrement(){
+        function decrement() {
             number--;
             $("#clock").html("<h2> Time Remaining: " + number + "</h2>")
-        
-        if(number === 0){
-            stop();
-        }
 
-        function stop(){
-            clearInterval(intervalID);
-        }
+            if (number === 0) {
+                stop();
 
-        // var showQuestions = function {
+                $("#questions").hide();
+                $("#clock").hide();
+                $("#submit-button").hide();
 
-        // }
-    }    
+                var btns = $("input:radio")
 
-   
+                for (i = 0; i < btns.length; i++) {
+                    // console.log($(btns[0]).is(':checked'))
 
-// setTimeout(twoMinutes, 1000 * 90);
+                    if ($(btns[i]).is(':checked')) {
+                        console.log("Yes " + btns[i].value);
 
 
-      //user must select only one answer to each question      
+                        if (btns[i].value === "true") {
+
+                            AnswersCorrect++;
+                            console.log("Yes");
+                        }
+
+                        else {
+                            AnswersIncorrect++;
+                            console.log("No");
+                        }
+
+                        var sum = AnswersCorrect + AnswersIncorrect;
+                        Unanswered = 10 - sum;
+                    }
+
+                }
+
+
+                    $("#results").show();
+
+                    $("#correct-result").append(AnswersCorrect);
+                    $("#incorrect-result").append(AnswersIncorrect);
+                    $("#unanswered-result").append(Unanswered);
+
+                    // Unasnwered = (10 - abs(AnswersCorrect + AnswersIncorrect));
+                    
+
+
+                
+
+                
+
+                function stop() {
+                    clearInterval(intervalID);
+                }
+
+            }
+
+            //     var difference = 10 - abs(AnswersCorrect + AnswersIncorrect);
             
+            // if (number === 0 & difference > 0) {
+            //     Unanswered++;
+            // }
 
-        
+
+
+            // while (AnswersCorrect + AnswersIncorrect < 10) {
+            //             Unanswered = 10 - abs(AnswersCorrect + AnswersIncorrect);
+
+            //         }
+
+        };
+
+
+
+
+
+        $("#submit-button").click(function () {
+            stop();
+            $("#questions").hide();
+            $("#clock").hide();
+            $("#submit-button").hide();
+
+            var btns = $("input:radio")
+
+            for (i = 0; i < btns.length; i++) {
+                // console.log($(btns[0]).is(':checked'))
+
+                if ($(btns[i]).is(':checked')) {
+                    console.log("Yes " + btns[i].value);
+
+                    // Answers.prototype.contains = function(check){
+                    //     return this.indexOf(btn[i]) > -1;
+                    // };
+
+                    // function check(){
+                    //     return btn[i].value;
+                    // }
+
+                    // check();
+
+
+                    if (btns[i].value === "true") {
+
+                        AnswersCorrect++;
+                        console.log("Yes");
+                    }
+
+                    else {
+                        AnswersIncorrect++;
+                        console.log("No");
+                    }
+
+
+                    var sum = AnswersCorrect + AnswersIncorrect;
+                        Unanswered = 10 - sum;
+
+                }
+
+            }
+
+            // while (AnswersCorrect + AnswersIncorrect < 10) {
+            //     Unanswered = 10 - abs(AnswersCorrect + AnswersIncorrect);
+
+
+
+            // }
+
+            $("#results").show();
+
+            $("#correct-result").append(AnswersCorrect);
+            $("#incorrect-result").append(AnswersIncorrect);
+            $("#unanswered-result").append(Unanswered);
+
+
+
+
+
+
+        });
+
     });
-   
- var Answers = ["Green", "Oreo", "Alisha May Emily", "'Morning is here!'", "Megan", "Jessica Rabbit", "Liam and Devon", "Emma and Daniel", "Buick Lesabre", "72"]   
-
- 
- 
-
- $("input:radio").each(function(){
-
-    if ($("input[name='question1'][value='true']").prop("checked")){
-        AnswersCorrect++;
-        console.log(AnswersCorrect);
-    }
-    
-    // var selected = document.getElementById("q1").checked;
-    //     console.log(selected);   
-    // var radioValue = $("input[type='radio'].radioButtons:checked").val();
-    // console.log(radioValue);
-
-    
-    
-    // for (var i = 0; i < Answers.length; i++){
-        // var Answers = Answers.toString();
-
-    //     if(radioValue.ischecked() && value==="true"){
-        
-
-    //         AnswersCorrect++;
-    //         console.log(AnswersCorrect);        
-    //     }
-    
-
-    //     else {
-
-    //     AnswersIncorrect++;
-        
-    // }
-// }
-
-    
- });
-
-
-
- $("#submit-button").click(function(){
-    $("#questions").hide();
-    $("#clock").hide();
-    $("#submit-button").hide();
-    $("#results").show();
- });
- 
-
- 
 
 
 
@@ -130,6 +195,5 @@ $(document).ready(function(){
 
 
     //restart game...
-    
 
 });
