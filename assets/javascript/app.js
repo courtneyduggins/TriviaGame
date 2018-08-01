@@ -24,7 +24,7 @@ $(document).ready(function () {
         decrement();
 
 
-        var number = 5;
+        var number = 60;
         var intervalID;
 
 
